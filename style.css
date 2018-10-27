@@ -1,5 +1,5 @@
 h1 {
-    color: #794a38;
+    color: #940081;
     text-align: center;
     font-family: cursive;
     font-size: 50px;
@@ -18,7 +18,7 @@ body {
 }
 
 nav a {
-    background: #f8aaee;
+    background: #940081;
     color: #fff;
     display: block;
     text-decoration: none;
