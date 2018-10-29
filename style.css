@@ -29,6 +29,8 @@ nav a {
     font-family: cursive;
 }
 
+a.ex1:hover, a.ex1:active {color: red;}
+
 @media (min-width: 800px) {
     
 
