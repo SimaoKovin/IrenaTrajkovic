@@ -1,6 +1,7 @@
 body {
     background: #e3cdc0;
     color: white;
+     margin: 0px;
 }
 
 img {
@@ -14,4 +15,5 @@ img:hover {
     transform: scale(1.2);
     z-index: 1;
     position: relative;
+    transition: 1s;
 }
