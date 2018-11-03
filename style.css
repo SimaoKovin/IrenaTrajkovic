@@ -19,6 +19,7 @@ body {
 
 nav a {
     background: #940081;
+    opacity: 50%;
     color: #fff;
     display: block;
     text-decoration: none;
