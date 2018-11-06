@@ -53,5 +53,8 @@ a.ex1:hover, a.ex1:active {color: red;}
         display: flex;
         justify-content: space-between;
     }
+    .half-width {
+        width: 48%;
+    }
     
 }
