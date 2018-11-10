@@ -1,15 +1,15 @@
-h1 {
+/* h1 {
     color: #ed553b;
     text-align: center;
     font-family: 'Charmonman', cursive;
     font-size: 60px;
     text-shadow: 2px 2px 1px #000;
-}
+}*/
 
 body {
     background: #e3cdc0;
     margin: 0;
-    background-image: url(naslovna2.jpg);
+    background-image: url(naslovna.jpg);
     background-repeat: no-repeat;
     background-size: cover; /*visina*/ /*contain širina*/
     background-position-x: center;
@@ -39,25 +39,7 @@ nav > a {
 .trajkovic-logo {
     height: 250px;
     width: 250px;
-    margin-left: 40%;
 }
-
-div .logotip {
-    margin: left;
-}
-
-.onama {
-    display: block;
-    margin: 10%;
-    font-size: 150%;
-    color: white;
-        background: black;
-        opacity: 0.5;
-        border: 20px solid rgba(0, 0, 0, 0.3);
-    
-}
-    
-
 
 /* DESKTOP RACUNARI */
 
@@ -78,8 +60,6 @@ div .logotip {
         color: #fff;
     }
 
-    
-
     .dropdown {
         position: relative;
         display: inline-block;
@@ -89,7 +69,7 @@ div .logotip {
     .dropdown-content {
         display: none;
         position: absolute;
-        min-width: 100%;
+        width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
@@ -98,23 +78,18 @@ div .logotip {
         display: block;
     }
 
+    .dropdown-content a:hover,
+    .dropdown-content:hover .ex1 {
+        background-color: #068587;
+        color: #fff;
+    }
+
     .dropdown:hover .dropdown-content {
-        display: block;
+        display: block;   
     }
 
     a.droplink {
     border: none;
-    }
-    
-    .onama {
-        display: block;
-        margin: 10%;
-        font-size: 200%;
-        color: white;
-        background: black;
-        opacity: 0.5;
-        border: 20px solid rgba(0, 0, 0, 0.3);
-    
     }
 
 }
