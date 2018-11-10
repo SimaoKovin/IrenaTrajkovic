@@ -46,6 +46,14 @@ div .logotip {
     margin: left;
 }
 
+.onama {
+    display: block;
+    margin: 10%;
+    font-size: 150%;
+    color: #77493D;
+}
+
+
 /* DESKTOP RACUNARI */
 
 @media (min-width: 800px) {
@@ -91,6 +99,13 @@ div .logotip {
 
     a.droplink {
     border: none;
+    }
+    
+    .onama {
+        display: block;
+        margin: 10%;
+        font-size: 200%;
+        color: #77493D;
     }
 
 }
