@@ -51,8 +51,8 @@ div .logotip {
     margin: 10%;
     font-size: 150%;
     color: black;
-    background: #C09D77;
-        opacity: 70%;
+    background: transparent;
+    border: 20px solid rgba(0, 0, 0, 0.3);
 }
 
 
@@ -108,8 +108,8 @@ div .logotip {
         margin: 10%;
         font-size: 200%;
         color: black;
-        background: #C09D77;
-        opacity: 70%;
+        background: transparent;
+        border: 20px solid rgba(0, 0, 0, 0.3);
     }
 
 }
