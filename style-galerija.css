@@ -3,9 +3,9 @@ body {
     margin: 0;
     background-image: url(naslovna2.jpg);
     background-repeat: no-repeat;
-    background-size: cover; /*visina*/ /*contain širina*/
+    background-size: cover;
     background-position-x: center;
-    min-height: 100vh; /*viewport height*/
+    min-height: 100vh; 
 
 }
 
