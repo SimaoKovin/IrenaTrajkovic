@@ -27,7 +27,7 @@ nav {
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     z-index: 1;
     position: relative;
     transition: .5s;
@@ -47,13 +47,14 @@ nav > a {
     border-bottom: 1px solid #fff;
 }
 
-.glavni {
+.galerija {
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
     grid-auto-rows: 200px;
-    grid-gap: 1px;
+    grid-gap: 15px;
     grid-auto-flow: dense;  
-}    
+}  
   
 .trajkovic-logo {
     height: 250px;
