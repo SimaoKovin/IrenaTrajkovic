@@ -1,95 +1,173 @@
-/* h1 {
-    color: #ed553b;
-    text-align: center;
-    font-family: 'Charmonman', cursive;
-    font-size: 60px;
-    text-shadow: 2px 2px 1px #000;
-}*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+:root {
+    --background: rgba(0, 224, 180, 0.85);
+}
 
 body {
-    background: #e3cdc0;
     margin: 0;
-    background-image: url(naslovna2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; /*visina*/ /*contain širina*/
-    background-position-x: center;
-    min-height: 100vh; /*viewport height*/ 
+    background: #222;
+    font-family:'Montserrat', sans-serif;
+}
+
+.content {
+    background-image: url("naslovna2.jpg");
+    height: 100vh;
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+
+/* Stilizovanje navigacije pocinje odavde */
+
+header {
+    background: var(--background);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 nav {
-    opacity: 0.7;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 0); 
+    transition: transform 400ms ease-in-out;
+    transform-origin: top;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 
 nav a {
-    background: #4fb99f;
-    color: #000;
-    display: block;
+    color: white;
     text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    font-weight: bolder;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
-nav > a {
-    border-bottom: 1px solid #fff;
+nav a:hover {
+    color: #000;
 }
 
-.trajkovic-logo {
-    height: 250px;
-    width: 250px;
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1)
 }
 
-/* DESKTOP RACUNARI */
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label { 
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 2em;
+    border-radius: 1.5px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+/* DESKTOP NAVIGACIJA*/
 
 @media (min-width: 800px) {
     
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
     nav {
-        background-color: #000;
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
         display: flex;
     }
 
-    nav > a {
-        width: 25%;
-        border-bottom: none;
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
     }
 
-    a.ex1:hover {
-        background-color: #068587;
-        color: #fff;
-    }
-
-    .dropdown {
+    nav a {
+        opacity: 1;
         position: relative;
-        display: inline-block;
-        width: 25%;
     }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        width: 100%;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-content a {
+    nav a::before {
+        content: "";
         display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
     }
 
-    .dropdown-content a:hover,
-    .dropdown-content:hover .ex1 {
-        background-color: #068587;
-        color: #fff;
+    nav a:hover::before {
+        transform: scale(1, 1);
     }
-
-    .dropdown:hover .dropdown-content {
-        display: block;   
-    }
-
-    a.droplink {
-    border: none;
-    }
-
 }
