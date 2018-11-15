@@ -1,48 +1,31 @@
 <!DOCTYPE html>
-<html lang="sr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Charmonman|Montserrat" rel="stylesheet">
-    <title>Naslovna</title>
 </head>
-
 <body>
     <header>
-        <div class="logitop">
-            <img class="trajkovic-logo" src="logo1.png" alt="trajkovic logo">
-        </div>
-        <!-- <h1>Irena Trajković</h1> -->
-        <nav class="navbar">
-            <a class="ex1" href="index.html">Naslovna</a>
-            <a class="ex1" href="o-nama.html">O Nama</a>
-            <!-- <div class="dropdown">
-            <button class="dropbtn">Galerija</button> -->
-            <div class="dropdown">
-                <a class="ex1" >Galerija</a>
-                <div class="dropdown-content">
-                    <a href="decije-torte.html">Dečije torte</a>
-                    <a href="srca-torte.html">Srca torte</a>
-                    <a href="svadbene-torte.html">Svadbene torte</a>
-                    <a href="torte-za-posebne-prilike.html">Torte za posebne prilike</a>
-                    <a href="torte-na-sprat.html">Torte na sprat</a>
-                </div>
-            </div>
-            <a class="ex1" href="kontakt.html">Kontakt</a>
-        </nav>
+        <h1 class="logo">Logo</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
+        <nav>
+            <ul>
+                <li><a href="index.html">Naslovna</a></li>
+                <li><a href="index.html">O nama</a></li>
+                <li><a href="index.html">Galerija</a></li>
+                <li><a href="index.html">Kontakt</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label"> <!--for atribut vidi samo id, koji smo dodali u input. ovo radimo da bi ova dva elementa mogla da rade zajedno bez problema.-->
+            <span></span>
+        </label>
     </header>
 
-    <footer>
-
-    </footer>
-
+    <div class="content">
+        <h2>Your content goes here.</h2>
+    </div>
 </body>
-
-
-
-
 </html>
